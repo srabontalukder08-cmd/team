@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Team Members</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- mobile responsive -->
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/9b100828f5.js" crossorigin="anonymous"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      box-sizing: border-box;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      background: #161623;
+      min-height: 100vh;
+    }
+    section::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: linear-gradient(#f00c,#f0f);
+      clip-path: circle(30% at right 70%);
+    }
+    section::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: linear-gradient(#2196f3,#e91e63);
+      clip-path: circle(20% at 10% 10%);
+    }
+    .container {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 40px 0;
+      gap: 20px;
+    }
+    .card {
+      position: relative;
+      width: 300px;
+      background: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      backdrop-filter: blur(10px);
+      flex-direction: column;
+      padding: 60px 20px 40px;
+      flex-shrink: 0;
+      transition: 0.5s;
+      opacity: 1;
+    }
+    .container:hover .card {
+      opacity: 0.4;     
+    }
+    .container .card:hover{
+        opacity: 1;
+        transform: scale(1.05s);
+        z-index: 2;
+    }
+    .card .content {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      opacity: 0.8;
+      transition: 0.5s;
+    }
+    .card:hover .content {
+      opacity: 1;
+      transform: translateY(-20px);
+    }
+    .card .imgBx {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 10px solid rgba(0,0,0,0.25);
+    }
+    .card .imgBx img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+    }
+    .card .contentBx h3 {
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 500;
+      font-size: 18px;
+      text-align: center;
+      margin: 20px 0 10px;
+      line-height: 1.1em;
+    }
+    .card .contentBx h3 span {
+      font-size: 12px;
+      font-weight: 300;
+      text-transform: initial;
+    }
+    .sci {
+      position: relative;
+      bottom: auto;
+      display: flex;
+      justify-content: center;
+      margin-top: 15px;
+    }
+    .sci li {
+      list-style: none;
+      margin: 0 10px;
+      transform: translateY(40px);
+      transition: 0.5s;
+      opacity: 0;
+      transition-delay: calc(0.1s * var(--i));
+    }
+    .card:hover .sci li {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+    .sci li a {
+      color: #fff;
+      font-size: 22px;
+    }
+
+    /*  Responsive */
+    @media (max-width: 900px) {
+      .container {
+        justify-content: center;
+      }
+      .card {
+        width: 45%;  /* ট্যাবলেটে ২টা কার্ড এক লাইনে */
+        height: auto;
+      }
+    }
+    @media (max-width: 600px) {
+      body {
+        padding: 20px;
+      }
+      .container {
+        flex-direction: column;
+      }
+      .card {
+        width: 100%; /* মোবাইলে ফুল-উইডথ */
+        height: auto;
+      }
+      .card .imgBx {
+        width: 120px;
+        height: 120px;
+      }
+      .card .contentBx h3 {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <div class="container">
+      <div class="card">
+        <div class="content">
+          <div class="imgBx"><img src="srabon.jpg" alt=""></div>
+          <div class="contentBx">
+            <h3>Md. Omar Faruk Srabon <br><span>Team Leader</span></h3>
+          </div>
+        </div>
+        <ul class="sci">
+          <li style="--i:1"><a href="https://www.facebook.com/srabon.talukder.89"><i class="fa-brands fa-facebook"></i></a></li>
+          <li style="--i:2"><a href="https://www.linkedin.com/in/srabonof/"><i class="fa-brands fa-linkedin"></i></a></li>
+          <li style="--i:3"><a href="mailto:srabontalukder08@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="content">
+          <div class="imgBx"><img src="Aysha.jpg" alt=""></div>
+          <div class="contentBx">
+            <h3>Aysha Siddika <br><span>Web Designer</span></h3>
+          </div>
+        </div>
+        <ul class="sci">
+          <li style="--i:1"><a href="https://www.facebook.com/ayesha.siddika.685795"><i class="fa-brands fa-facebook"></i></a></li>
+          <li style="--i:2"><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+          <li style="--i:3"><a href="#"><i class="fa-solid fa-envelope"></i></a></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="content">
+          <div class="imgBx"><img src="Noha.jpeg" alt=""></div>
+          <div class="contentBx">
+            <h3>Noha Amin<br><span>Web Developer</span></h3>
+          </div>
+        </div>
+        <ul class="sci">
+          <li style="--i:1"><a href="https://www.facebook.com/noha.amin.04"><i class="fa-brands fa-facebook"></i></a></li>
+          <li style="--i:2"><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+          <li style="--i:3"><a href="#"><i class="fa-solid fa-envelope"></i></a></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="content">
+          <div class="imgBx"><img src="abdullah.jpg" alt=""></div>
+          <div class="contentBx">
+            <h3>Abdullah Asrafi<br><span>Web Developer</span></h3>
+          </div>
+        </div>
+        <ul class="sci">
+          <li style="--i:1"><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+          <li style="--i:2"><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+          <li style="--i:3"><a href="#"><i class="fa-solid fa-envelope"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
